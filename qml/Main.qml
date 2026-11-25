@@ -1,4 +1,3 @@
-
 import QtQuick
 import QtQuick.Controls
 import qtbridge_intro
@@ -8,14 +7,25 @@ ApplicationWindow {
     width: 640
     height: 420
 
-    Component.onCompleted: Backend.say_hello()
-
     title: "QtBridge Intro"
 
-    Button {
+    Column {
         anchors.centerIn: parent
-        text: "Say Hello"
+        spacing: 20
 
-        onClicked: Backend.say_hello()
+        Text {
+            text: "QtBridge Test"
+            font.pixelSize: 24
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        Button {
+            text: "Test Rust Backend"
+
+            onClicked: {
+    console.log("QML: Button clicked")
+    Backend.button_clicked()
+}
+        }
     }
 }

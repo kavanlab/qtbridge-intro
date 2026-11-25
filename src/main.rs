@@ -9,6 +9,11 @@ impl Backend {
     fn say_hello(&self) {
         println!("Hello from Rust!");
     }
+
+    #[qslot]
+    fn button_clicked(&self) {
+        println!("Button clicked! Rust backend is working.");
+    }
 }
 
 fn main() {

@@ -1,0 +1,6 @@
+# Rust build artifacts
+/target/
+
+# Qt installer files
+qt-online-installer.run
+qt-online-installer.runcurl
